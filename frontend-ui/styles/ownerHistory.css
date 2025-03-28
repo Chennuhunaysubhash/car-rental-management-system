@@ -1,0 +1,49 @@
+/* ownerHistory.css */
+
+.history-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #D4E2EB;
+    padding: 20px;
+    
+    
+  }
+  
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #e0e6eb;
+    overflow: hidden;
+  }
+  
+  .history-table thead {
+    background-color: #c4cbd2;
+  }
+  
+  .history-table th, .history-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #b0b8c0;
+    font-size: 16px;
+  }
+  
+  .history-table th {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .history-table tbody tr:hover {
+    background-color: #d8dde3;
+  }
+  
+  .history-table td {
+    color: #555;
+  }
+  

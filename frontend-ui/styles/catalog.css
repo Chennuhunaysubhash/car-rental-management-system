@@ -1,0 +1,672 @@
+/* 🌐 General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #D4E2EB;
+  margin: 0;
+  padding: 0;
+}
+
+/* 📜 Catalog Container */
+.catalog-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 320px;
+  padding: 20px 10px;
+}
+
+/* 🔠 Heading and Search Bar */
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.catalog-title {
+  margin-left: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-container {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* 🚗 Car List (4x4 Grid Layout) */
+
+
+/* 📱 Responsive Grid */
+
+/* 🚗 Car List (4x4 Grid Layout) */
+.car-list {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  width: 90%; /* Ensure full width of the container */
+  height: 70px; /* Automatically adjust height */
+  padding: 20px; /* Optional: Add padding for spacing */
+}
+
+
+/* 🏷️ Car Card */
+.car-card {
+  background: #D4E2EB;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #353D45;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+/* 🖼️ Car Image */
+.car-image {
+  width: 10px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  
+}
+
+/* ❤️ Wishlist Button */
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white !important; /* Default color */
+}
+
+.wishlist-btn.wishlisted {
+  color: rgb(19, 18, 18) !important; /* Force the color change */
+}
+
+
+
+/* 🔤 Car Info */
+/* 🔤 Car Info - Align in a Single Line (Except Price) */
+.car-info {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.car-info p {
+  margin: 0;
+  padding: 1px;
+}
+
+.car-brand {
+  font-size: 14px;
+  font-weight: bold;
+  color: #353D45;
+}
+
+.car-model {
+  font-size: 12px;
+  color: #73808E;
+}
+
+.car-year {
+  font-size: 14px;
+  font-weight: bold;
+  color: #353D45;
+}
+
+/* 📌 Price */
+.price {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.discounted-price {
+  color: #2C3E50;
+  font-size: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+
+/* 📍 Buttons */
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cart-btn{
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+ .learn-more-btn {
+  padding: 8px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart-btn {
+  background-color: #55b9ee;
+  color: white;
+}
+
+.cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.learn-more-btn {
+  background-color: #73808E;
+  color: white;
+}
+
+.learn-more-btn:hover {
+  background-color: #62758a;
+}
+
+/* Modal Styles */
+/* 🔘 Modal Overlay - Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📏 Smaller Modal */
+.modal {
+  margin-top: 20px;
+  background: white;
+  padding: 15px; /* Reduced padding */
+  border-radius: 10px;
+  width: 320px; /* Reduced width */
+  text-align: center;
+  position: relative;
+}
+
+/* 🖼️ Car Image Inside Modal */
+.modal-car-image {
+  width: 90%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+/* 🔘 Close Button - Centered */
+.close-div {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+/* ❌ Close Button Styling */
+.close-btn {
+  width: 35px;
+  height: 35px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✨ Hover Effect */
+.close-btn:hover {
+  background: #e74c3c;
+  color: white;
+  transform: scale(1.1);
+}
+.card-now-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* 📌 Adjusted Buttons */
+/* 🛒 Small Cart Now Button */
+.cart-now-btn {
+  background: #B1B8C0;
+  color: rgb(31, 24, 24);
+  margin-left: 5px;
+  padding: 6px 12px; /* Smaller size */
+  font-size: 14px; /* Smaller font */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+.cart-now-btn:hover {
+  background: #9ba5af;
+}
+
+/* 📖 Big Book Now Button */
+.book-now-btn {
+  background: #B1B8C0;
+  color: rgb(12, 9, 9);
+  margin-right: 5px;
+  padding: 12px 50px; /* Larger size */
+  font-size: 18px; /* Bigger font */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+/* 🎨 Hover Effect for Book Now */
+.book-now-btn:hover {
+  background: #9ba5af;
+}
+
+/* 📏 Gap Between Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between buttons */
+  align-items: center;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 480px) {
+  .cart-now-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .book-now-btn {
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+}
+
+/* 📝 Owner Details */
+.owner-details {
+  margin: 10px 5px; /* Adds margin: 10px (top & bottom), 5px (left & right) */
+  width: auto; /* Adjust width dynamically */
+  border-radius: 5px;
+  background-color: #efefef;
+  text-align: left;
+  font-size: 14px; /* Smaller text */
+  padding: 10px; /* Adds some padding for better appearance */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.owner-details:hover {
+  background-color: #e0e0e0; /* Slightly darker background */
+  transform: scale(1.02); /* Slight enlargement effect */
+}
+
+/* Owner Header */
+.owner-header {
+  font-size: 14px;
+  color: #73808E;
+  transition: color 0.3s ease;
+}
+
+/* Owner Name & Phone */
+.owner-name, .owner-phone {
+  font-size: 12px;
+  color: #73808E;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Name & Phone */
+.owner-name:hover, .owner-phone:hover,.owner-header:hover {
+  color: #333; /* Darker text on hover */
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .modal {
+    width: 280px; /* Even smaller on tablets */
+  }
+  
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 250px; /* Even smaller on mobile */
+  }
+
+  .close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .cart-now-btn, 
+  .book-now-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .catalog-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .car-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.car-select-info {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.car-select-info p {
+  margin: 0;
+  padding: 1px;
+}
+
+.car-select-brand {
+  font-size: 16px;
+  font-weight: bold;
+  color: #353D45;
+}
+
+.car-select-model {
+  font-size: 14px;
+  color: #73808E;
+  
+}
+
+.car-select-year {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #353D45;
+}
+
+.select-type,
+.select-mileage {
+  font-size: 12px; /* Smaller text */
+  text-align: left; /* Aligns text to the left */
+  width: 100%; /* Ensures it spans the container */
+  margin-left: 5px; /* Pushes it slightly from the left edge */
+  color: #555; /* Slightly dim color for readability */
+}
+/* Container for Price & Availability */
+.modal-price-container {
+  display: flex;
+  justify-content: space-between; /* Pushes elements to left & right */
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Left-side Price */
+.modal-price {
+  font-size: 16px; /* Smaller text */
+  font-weight: bold;
+  color: #2C3E50; /* Dark color for contrast */
+  margin-left: 5px; /* Align to the left */
+}
+
+/* Right-side Availability */
+.availability {
+  font-size: 14px; /* Smaller text */
+  font-weight: bold;
+  color: rgb(116, 60, 219); /* Highlight availability */
+  margin-right: 5px; /* Align to the right */
+}
+
+
+/* Overlay for the modal */
+
+.cart-btn.in-cart {
+  color: white;
+  background-color: green;
+}
+/* 🏷️ Wishlist Container */
+/* 🏷️ Wishlist Container */
+.log-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  position: absolute;
+  top: 120px; /* Adjust this based on nav height */
+  left: 20px;
+  z-index: 999;
+}
+
+/* Ensure the title aligns properly */
+
+
+
+/* 🛻 Car List */
+.log-car-list {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  width: 90%; /* Ensure full width of the container */
+  height: 70px; /* Automatically adjust height */
+  padding: 20px;
+}
+
+/* 🏷️ Car Card */
+.log-car-card {
+  background: #D4E2EB;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #353D45;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖼️ Car Image */
+.log-car-image {
+  width: 190px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ❤️ Wishlist Button */
+.wishlist-btn1 {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white !important; /* Default color */
+}
+
+.wishlist-btn1.wishlisted {
+  color: rgb(19, 18, 18) !important; /* Force the color change */
+}
+
+/* 🔤 Car Info - Align in a Single Line (Brand, Model, Year) */
+.log-car-info {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Aligns the items vertically in the center */
+  gap: 10px; /* Adds spacing between the items */
+}
+
+.log-car-brand, .log-car-model, .log-car-year {
+  margin: 0; /* Removes default margins for the <p> elements */
+}
+
+.log-car-model {
+  font-size: 12px; /* Adjusts model styling if needed */
+  font-weight: bold;
+  color: gray;
+}
+
+.log-car-brand, .log-car-year {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+/* 📌 Price */
+.log-price {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.log-discounted-price {
+  color: #2C3E50;
+  font-size: 15px;
+}
+
+.log-original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* 📍 Buttons */
+.log-card-buttons {
+  display: flex;
+  gap: 10px; /* Add gap between the buttons */
+  margin-top: 10px;
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.log-cart-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.log-learn-more-btn{
+  padding: 8px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.log-cart-btn {
+  background-color: #55b9ee;
+  color: white;
+}
+
+.log-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.log-learn-more-btn {
+  background-color: #73808E;
+  color: white;
+}
+
+.log-learn-more-btn:hover {
+  background-color: #62758a;
+}
+
+@media (max-width: 1200px) {
+  .log-car-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .log-car-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .log-car-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+  }
+}

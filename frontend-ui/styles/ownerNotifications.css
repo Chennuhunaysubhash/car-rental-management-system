@@ -1,0 +1,143 @@
+.notifications-container1 {
+    padding: 20px;
+    max-width: 80%;
+    margin-left: 20px; /* Force left margin */
+    margin-right: auto; /* Auto adjust right margin */
+    margin-top: 20px;
+}
+
+/* 🔹 Ensure body & parent containers allow margin */
+body, html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* If notifications-container is inside a parent div, make sure it allows margins */
+.parent-container {
+    display: flex;
+    justify-content: flex-start; /* Align left */
+}
+
+/* Notification Box */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.notifications-list1 {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.notification-item1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d3d3d3;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.notification-item1 span {
+    flex-grow: 1;
+}
+
+/* Delete Icon */
+.delete-icon1 {
+    width: 22px; /* Adjust size as needed */
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.delete-icon1:hover {
+    transform: scale(1.3); /* Slight zoom effect on hover */
+    opacity: 0.6; /* Reduce opacity to give a smooth effect */
+}
+
+.delete-icon1:active {
+    transform: scale(0.9); /* Slight shrink effect when clicked */
+}
+
+
+/* ✅ Responsive Fixes */
+
+/* 🔹 Large Screens (width > 1200px) */
+@media (min-width: 1200px) {
+    .notifications-container1 {
+        max-width: 70%;
+        margin-left: 200px; /* Increase left margin */
+    }
+}
+
+/* 🔹 Tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+    .notifications-container1 {
+        max-width: 90%;
+        margin-left: 100px; /* Adjust for tablets */
+    }
+}
+
+/* 🔹 Mobile Devices (width <= 768px) */
+@media (max-width: 768px) {
+    .notifications-container1 {
+        max-width: 95%;
+        margin-left: 20px; /* Minimal left margin */
+        padding: 10px;
+    }
+
+    .notification-item1 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .delete-icon1 {
+        margin-left: 0;
+        align-self: flex-end;
+    }
+}
+
+/* 🔹 Small Mobile (width <= 480px) */
+@media (max-width: 480px) {
+    .notifications-container1 {
+        margin-left: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .notification-item1 {
+        padding: 8px;
+    }
+}
+/* Light Theme */
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --nav-bg: #f8f9fa;
+  }
+  
+  /* Dark Theme */
+  :root[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --nav-bg: #333;
+  }
+  
+  .dashboard-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dashboard-header {
+    background-color: var(--nav-bg);
+    padding: 10px;
+  }
+  

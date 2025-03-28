@@ -1,0 +1,107 @@
+/* Primary and secondary gradients */
+:root {
+  --primary-color: #cce6f4;
+  --secondary-color: #e9f2f9;
+  --text-color: #333;
+  --button-bg: #424242;
+  --button-text: #fff;
+  --hover-bg: #333;
+}
+
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--secondary-color);
+}
+
+/* Header styling */
+.dashboard-header {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #b0c4de;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links ul li {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.nav-links ul li:hover {
+  text-decoration: underline;
+}
+
+.account-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Main content styling */
+.dashboard-content {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.greeting {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.welcome-box {
+  background-color: #f8f9fa;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 350px;
+  margin: 0 auto 30px auto;
+  padding: 30px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-box h2 {
+  font-size: 22px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Button styling */
+.manage-cars-btn {
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-cars-btn:hover {
+  background-color: var(--hover-bg);
+}
