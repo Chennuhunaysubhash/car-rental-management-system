@@ -1,0 +1,271 @@
+/* 🏷️ Wishlist Container */
+/* 🏷️ Wishlist Container */
+.wishlist-container1 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  position: absolute;
+  top: 100px; /* Adjust this based on nav height */
+  left: 20px;
+  z-index: 999;
+}
+
+/* Ensure the title aligns properly */
+.wishlist-container1 h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+
+/* 🛻 Car List */
+.wish-car-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 🏷️ Car Card */
+.wish-car-card {
+  background: #D4E2EB;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #353D45;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖼️ Car Image */
+.wish-car-image {
+  width: 190px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ❤️ Wishlist Button */
+.wishlist-btn1 {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white !important; /* Default color */
+}
+
+.wishlist-btn1.wishlisted {
+  color: rgb(19, 18, 18) !important; /* Force the color change */
+}
+
+/* 🔤 Car Info - Align in a Single Line (Brand, Model, Year) */
+.wish-car-info {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Aligns the items vertically in the center */
+  gap: 10px; /* Adds spacing between the items */
+}
+
+.wish-car-brand, .wish-car-model, .wish-car-year {
+  margin: 0; /* Removes default margins for the <p> elements */
+}
+
+.wish-car-model {
+  font-size: 12px; /* Adjusts model styling if needed */
+  font-weight: bold;
+  color: gray;
+}
+
+.wish-car-brand, .wish-car-year {
+  font-weight: normal;
+  color: #0a0a0a;
+}
+
+/* 📌 Price */
+.wish-price {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.wish-discounted-price {
+  color: #2C3E50;
+  font-size: 15px;
+}
+
+.wish-original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* 📍 Buttons */
+.wish-card-buttons {
+  display: flex;
+  gap: 10px; /* Add gap between the buttons */
+  margin-top: 10px;
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.wish-cart-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.wish-learn-more-btn{
+  padding: 8px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.wish-cart-btn {
+  background-color: #55b9ee;
+  color: white;
+}
+
+.wish-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.wish-learn-more-btn {
+  background-color: #73808E;
+  color: white;
+}
+
+.wish-learn-more-btn:hover {
+  background-color: #62758a;
+}
+
+/* 🌍 Responsive Wishlist Page */
+
+/* ✅ Large Screens (1024px and above) */
+@media (max-width: 1200px) {
+  .wish-car-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for slightly smaller screens */
+  }
+}
+
+/* ✅ Tablets & Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  .wishlist-container1 {
+    top: 90px; /* Adjust to prevent navbar overlap */
+    left: 10px;
+    padding: 15px;
+  }
+
+  .wish-car-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .wish-car-image {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+  }
+
+  .wish-card-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wish-cart-btn, .wish-learn-more-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* ✅ Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  .wishlist-container1 {
+    top: 80px; /* Prevent navbar overlap */
+    left: 0;
+    align-items: center; /* Center align on smaller screens */
+    text-align: center;
+  }
+
+  .wishlist-container1 h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .wish-car-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    gap: 15px;
+  }
+
+  .wish-car-card {
+    padding: 12px;
+  }
+
+  .wish-car-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .wish-car-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wish-card-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wish-cart-btn, .wish-learn-more-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* ✅ Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+  .wishlist-container1 {
+    top: 70px; /* Ensure no overlap */
+    padding: 10px;
+  }
+
+  .wishlist-container1 h2 {
+    font-size: 18px;
+  }
+
+  .wish-car-list {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    gap: 10px;
+  }
+
+  .wish-car-card {
+    padding: 10px;
+  }
+
+  .wish-cart-btn, .wish-learn-more-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+.no-wish{
+  text-align: left;
+  margin-left: 30px;
+}

@@ -1,0 +1,323 @@
+/* Modal Overlay */
+.modal-overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Booking Modal */
+.main-booking-modal {
+    background: #fff;
+    width: 350px;
+    height: 440px;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(0, -50%);
+}
+
+/* Modal Header */
+.main-booking-modal .text-div h2 {
+    background: #5d9bb3;
+    color: white;
+    font-size: 18px;
+    color: rgb(10, 10, 10);
+    padding: 15px;
+    text-align: center;
+    margin-left: -20px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 3px;
+    width: 350px;
+    margin-bottom: 18px;
+    
+}
+
+
+/* Close Button */
+.booking-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Car Details Container */
+.car-details1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Car Image */
+.booking-car-image1 {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Car Info (Fully Right-Aligned) */
+.car-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 16px;
+    flex: 1;
+}
+
+/* Car Brand & Model */
+.car-info1 p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Year (Second Line, Fully Right-Aligned) */
+.car-info1 span {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+    display: block;
+    text-align: right;
+}
+
+/* Price Container (Fully Right-Aligned) */
+.price-container1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+}
+
+/* Strikethrough Original Price */
+.original-price1 {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* Date Selection */
+.date-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Heading */
+.date-selection h3 {
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Input Fields Container */
+.date-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+/* Label Styling */
+.date-inputs label {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+.date-inputs input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* Booking Buttons */
+.booking-buttons1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Book Now Button */
+.confirm-booking-btn1 {
+    background: #5d9bb3;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.confirm-booking-btn1:hover {
+    background: #49889c;
+}
+
+/* Cancel Button */
+.cancel-booking-btn1 {
+    background: #ccc;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cancel-booking-btn1:hover {
+    background: #b3b3b3;
+}
+
+/* --------------------------------- */
+/* RESPONSIVE DESIGN */
+/* --------------------------------- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .booking-modal {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .booking-car-image1 {
+        width: 120px;
+        height: 90px;
+    }
+
+    .car-info1 p {
+        font-size: 15px;
+    }
+
+    .date-inputs input {
+        width: 140px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .booking-modal {
+        width: 90%;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+    }
+
+    .booking-modal h2 {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .booking-car-image1 {
+        width: 100px;
+        height: 80px;
+    }
+
+    .car-info1 {
+        font-size: 14px;
+    }
+
+    .car-info1 p {
+        font-size: 14px;
+    }
+
+    .car-info1 span {
+        font-size: 12px;
+    }
+
+    .date-inputs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .date-inputs input {
+        width: 100%;
+    }
+
+    .booking-buttons1 {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .confirm-booking-btn1, .cancel-booking-btn1 {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .booking-modal {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .booking-modal h2 {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .car-details1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .car-info1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .price-container1 {
+        justify-content: center;
+    }
+
+    .date-inputs {
+        flex-direction: column;
+    }
+
+    .date-inputs input {
+        width: 100%;
+    }
+
+    .booking-buttons1 {
+        flex-direction: column;
+    }
+
+    .confirm-booking-btn1, .cancel-booking-btn1 {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

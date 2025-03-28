@@ -1,0 +1,272 @@
+.cart-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: absolute;
+    top: 100px; /* Adjust this based on nav height */
+    left: 20px;
+    z-index: 999;
+}
+
+.cart-container h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+/* 📍 Price & Learn More Section */
+.price-learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.price {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds spacing between price and original price */
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 0.9em;
+}
+
+.learn-more {
+  margin-left: auto; /* Pushes "Learn More" to the right */
+}
+
+.learn-more a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.learn-more a:hover {
+  text-decoration: underline;
+}
+
+/* 🛻 Car List */
+.cart-car-list {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  width: 100%; /* Ensure full width of the container */
+  height: auto; /* Automatically adjust height */
+  padding: 20px; /* Optional: Add padding for spacing */
+}
+
+/* 🏷️ Car Card */
+.cart-car-card {
+  background: #D4E2EB;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #353D45;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖼️ Car Image */
+.cart-car-image {
+  width: 190px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ❤️ Wishlist Button */
+.wishlist-btn1 {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white !important; /* Default color */
+}
+
+.wishlist-btn1.wishlisted {
+  color: rgb(19, 18, 18) !important; /* Force the color change */
+}
+
+/* 🔤 Car Info - Align in a Single Line (Brand, Model, Year) */
+.cart-car-info {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Aligns the items vertically in the center */
+  gap: 10px; /* Adds spacing between the items */
+}
+
+.cart-car-brand, .cart-car-model, .cart-car-year {
+  margin: 0; /* Removes default margins for the <p> elements */
+}
+
+.cart-car-model {
+  font-size: 12px; /* Adjusts model styling if needed */
+  font-weight: bold;
+  color: gray;
+}
+
+.cart-car-brand, .cart--car-year {
+  font-weight: normal;
+  color: #0a0a0a;
+}
+
+/* 📌 Price */
+.cart-price {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.cart-discounted-price {
+  color: #2C3E50;
+  font-size: 15px;
+}
+
+.cart-original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+ 
+}
+
+/* 📍 Buttons */
+.cart-card-buttons {
+  display: flex;
+  gap: 10px; /* Add gap between the buttons */
+  margin-top: 10px;
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.cart-cart-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart-learn-more-btn {
+  padding: 8px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart-cart-btn {
+  background-color: #55b9ee;
+  color: white;
+}
+
+.cart-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.cart-learn-more-btn {
+  background-color: #73808E;
+  color: white;
+}
+
+.cart-learn-more-btn:hover {
+  background-color: #62758a;
+}
+
+/* 🌍 Responsive Design */
+
+/* ✅ For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .cart-container {
+    width: 95%;
+    left: 2.5%;
+    max-height: 85vh;
+    top: 70px;
+    padding: 15px;
+  }
+
+  .cart-car-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+  }
+
+  .cart-car-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-card-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-cart-btn, .cart-learn-more-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ✅ For Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .cart-container {
+    width: 100%;
+    left: 0;
+    top: 60px;
+    padding: 10px;
+  }
+
+  .cart-container h2 {
+    margin-left: 5px;
+    font-size: 18px;
+  }
+
+  .cart-car-list {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .cart-car-card {
+    padding: 10px;
+  }
+
+  .cart-car-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-car-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-card-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-cart-btn, .cart-learn-more-btn {
+    width: 100%;
+  }
+}
+.no-cars{
+    text-align: left;
+    margin-left: 30px;
+}

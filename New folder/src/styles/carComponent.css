@@ -1,0 +1,405 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+/* Main Container */
+.car-management-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #D4E2EB;
+    
+}
+
+/* Header */
+.car-management-container h2 {
+    text-align: left;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Add Car Button */
+.add-car-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+    background: #D4E2EB;
+    color: black;
+    border: 1px solid #73808E;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.add-car-btn:hover {
+    background: #4c5661;
+}
+.form-div{
+    padding: 15px;
+    background: #D4E2EB;
+    border-radius: 10px;
+    border: 1px solid #73808E;
+}
+/* Car Form */
+.car-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
+}
+
+/* Full width for textareas & image input */
+.car-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.car-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Inputs & Select */
+.car-form input,
+.car-form select,
+.car-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Textarea */
+.car-form textarea {
+    resize: none;
+    height: 38px;
+}
+
+/* Image Preview */
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Submit and Close Buttons */
+.button-container1 {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Adjust margin if needed */
+}
+
+.add-car-form-one, .close-form-btn-one {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-car-form-one {
+    background-color: #424643;
+    color: white;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.add-car-form-one:hover {
+    background-color: #141614; /* Darker green on hover */
+}
+
+.close-form-btn-one {
+    background-color: #424643;
+    color: white;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.close-form-btn-one:hover {
+    background-color: #141614; /* Darker red on hover */
+}
+
+
+/* Car List Container */
+.car-list {
+    margin-top: 20px;
+}
+
+.car-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* Smaller Car Images */
+.car-item img {
+    width: 50px !important;  /* Adjusted smaller width */
+    height: 50px !important; /* Adjusted smaller height */
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.car-image {
+    width: 120px !important;  /* Reduced width */
+    height: 80px !important; /* Reduced height */
+    object-fit: cover;
+    border-radius: 5px;
+   
+    mix-blend-mode: multiply;
+}
+
+
+/* Car Details */
+.car-details {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.car-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.car-availability {
+    font-size: 14px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Car Table */
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    
+    
+}
+
+.car-table thead {
+    background: #007bff;
+    color: white;
+}
+
+.car-table th,
+.car-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.car-table tr {
+    background: #e8eef2;
+    border: 1px solid #5A6673;
+}
+
+.car-table tr:hover {
+    background: #d1e0ea;
+}
+
+/* Smaller Car Image in Table */
+
+
+/* Car Actions */
+.car-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adjust gap for spacing */
+}
+
+.update-btn {
+    width: 50%;
+    text-align: center;
+    padding: 8px 1px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+}
+
+.delete-btn {
+    width: 50%;
+    text-align: center;
+    margin: 8px 1px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+}
+
+.update-btn {
+    background: #444;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #333;
+}
+
+.delete-btn {
+    background: #444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #333;
+}
+
+.font-style {
+    font: 1em sans-serif;
+    color: #353D45;
+}
+
+/* Modal Background */
+.delete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+.delete-modal-content {
+    background: #e8ecef;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 280px;
+}
+
+/* Add spacing between text and buttons */
+.delete-modal-content p {
+    margin-bottom: 27px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Modal Buttons */
+.confirm-btn,
+.cancel-btn {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 80px;
+}
+
+/* YES Button */
+.confirm-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+/* NO Button */
+.cancel-btn {
+    background-color: #222;
+    color: white;
+}
+
+/* Button Hover Effects */
+.confirm-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.cancel-btn:hover {
+    background-color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-form {
+        grid-template-columns: 1fr;
+    }
+
+    .car-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .car-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .car-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .update-btn,
+    .delete-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+.form-heading {
+    text-align: left;
+    margin-left: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.input-group label {
+    margin-left: 5px;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
